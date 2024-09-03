@@ -1,0 +1,17 @@
+name: Test-thingy
+on:
+  push:
+  schedule:
+    - cron: '0 */12 * * *'
+jobs:
+  test-thingy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.6
+      - run: |
+          echo "Hi mom!"
+          echo "who knows what this does"
+          echo "or if it even continues"
+      - run: |
+          echo "Can you do more?"
+          echo "or not?"
